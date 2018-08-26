@@ -89,11 +89,11 @@ mysql_select_db($bd);
 
 // Paso 3: ejecutar un comando SQL
 
-$query=mysql_query("select * from $tabla",$conex);
+$query=mysql_query("SELECT * FROM $tabla",$conex);
 
-echo "Tabla: ",strtoupper($bd),".",strtoupper($tabla),"< br>< / br >";
+echo "Tabla: ",strtoupper($bd),".",strtoupper($tabla),"<br></br >";
 
-echo "< table border='1'>";
+echo "<table border='1'>";
 
 $num_campos=mysql_num_fields($query);
 
@@ -105,7 +105,7 @@ for ($i=0;$i<$num_campos;$i++) {
 	
 	$campo=mysql_field_name($query,$i);
 	
-	echo "< th>$campo< / th>";
+	echo "< th>$campo</th>";
 	
 }
 
@@ -113,21 +113,21 @@ for ($i=0;$i<$num_campos;$i++) {
 
 while ($reg=mysql_fetch_array($query)) { 
 
-	echo "< tr>";
+	echo "<tr>";
 	
 	for ($i=0;$i<$num_campos;$i++) {
 		
-		echo "< td>$reg[$i]< / td>";
+		echo "<td>$reg[$i]</td>";
 		
 	}
 	
-	echo "< / tr>";
+	echo "</tr>";
 	
 }
 
-echo "< / table>";
+echo "</table>";
 
 // Pie
 
-echo "< br/>Total de registros obtenidos = ",mysql_num_rows($query);
+echo "<br/>Total de registros obtenidos = ",mysql_num_rows($query);
 ```
