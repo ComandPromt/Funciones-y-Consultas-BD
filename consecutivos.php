@@ -8,6 +8,9 @@ function consecutivos($array){
 		$x=0;
 		foreach($array as $pos => $num){
 			if($pos>0){
+				// se compara desde el segundo elemento de la matrix
+            			// ahora para saber si es un numero consecutivo le sumamos uno al numero anterior si es igual al numero
+            			// actual guardamos una varible indicando que el numero es consecutivo
 				if(!($numAnt[($pos-1)]+1)==$num){
 					$noc=array();
 					$noc1=$numAnt[($pos-1)];
