@@ -10,7 +10,6 @@ function consecutivos(array $array){
         for($x=0;$x<count($array);$x++){
             if($x+1<count($array)){
             if($array[$x]+1!=$array[$x+1]){
-                print $array[$x]+1;
                 $numero=$array[$x]+1;
                 $x=count($array);
                 $noc=true;
@@ -41,5 +40,4 @@ while ($fila = mysqli_fetch_row($consulta)){
 }
 
 print consecutivos($numeros);
-
 ?>
