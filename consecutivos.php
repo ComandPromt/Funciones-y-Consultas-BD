@@ -2,9 +2,11 @@
 
 date_default_timezone_set('Europe/Madrid');
 
-function consecutivos($array){
-	if($array[0]!=null && $array[0]==1){
-		$numAnt = array();
+function consecutivos(array $array){
+
+	if(count($array)>0 && $array[0]!=null && $array[0]==1){
+    
+        $numAnt = array();
 		$x=0;
 		foreach($array as $pos => $num){
 			if($pos>0){
