@@ -5,57 +5,26 @@ date_default_timezone_set('Europe/Madrid');
 function consecutivos(array $array){
 
 	if(count($array)>0 && $array[0]!=null && $array[0]==1){
-    
-        $numAnt = array();
-		$x=0;
-		foreach($array as $pos => $num){
-			if($pos>0){
-				// se compara desde el segundo elemento de la matrix
-            			// ahora para saber si es un numero consecutivo le sumamos uno al numero anterior si es igual al numero
-            			// actual guardamos una varible indicando que el numero es consecutivo
-				if(!($numAnt[($pos-1)]+1)==$num){
-					$noc=array();
-					$noc1=$numAnt[($pos-1)];
-					$noc[] = $noc1;
-					if($noc[1]-$noc[0]!=1){
-						$numero=$noc[0]+1;
-					}
-				}
-			}
-			$numAnt[$pos]=$num; 
-			$x++;
-		}
-		if($numAnt[0]!=1 && $array[0] !=1){
-			$numero=$numAnt[0]-1;
-			
-		}
-		else{
-			$validar=false;
-			for($x=0;$x<count($numAnt);$x++){
-				if($numero==null){
-				
-					if($numAnt[$x]+1==$numAnt[$x+1]){
-						$validar=true;
-					}
-					else{
-						$numero=$numAnt[$x]+1;
-					}
-				}
-			}
-			if($numero==null){
-				if(!$validar ){
-					$numero=$array[$x-1]-1;
-				}
-				else{
-					$numero=array_pop($array)+1;
-				}
-			}
-			
-		}
-	}
-	else{
-		$numero=1;
-	}
+        asort($array);
+
+        for($x=0;$x<count($array);$x++){
+            if($x+1<count($array)){
+            if($array[$x]+1!=$array[$x+1]){
+                print $array[$x]+1;
+                $numero=$array[$x]+1;
+                $x=count($array);
+                $noc=true;
+            }
+            }
+        }
+        if(!isset($noc)){
+            $numero=count($array)+1;
+        }
+  
+    }
+    else{
+        $numero=1;
+    }
 	return $numero;
 }
 
