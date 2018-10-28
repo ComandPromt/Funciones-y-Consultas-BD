@@ -21,16 +21,16 @@ que falta en la BD (claves primarias numéricas)
 
 ### Retornará 7
 - Si tenemos varios registros tales como: (1,2,3,4,5,6)
-
+[Consecutivos](https://github.com/ComandPromt/Funciones-y-Consultas-BD/blob/master/consecutivos.php)
 ---
 # Ver Palabras
 
 - Este programa nos muestra todas las las palabras de nuestra bd y nos pone la tilde correspondiente 
-
+[Ver Palabras](https://github.com/ComandPromt/Funciones-y-Consultas-BD/blob/master/ver_palabras.php)
 ---
-## Tabla Ahordado
+## Tabla Juego del ahorcado
 ---
-
+[SQL](https://github.com/ComandPromt/Funciones-y-Consultas-BD/blob/master/tabla_e_inserciones.sql)
 ~~~
 CREATE TABLE PRUEBA (
 Palabra VARCHAR (25),
